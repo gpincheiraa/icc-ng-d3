@@ -1,5 +1,9 @@
 DEMO ENCUESTA
-============
+=============
+
+Aplicación para ser presentanda en el taller de Angular y D3 el 29 de Agosto en la facultad de ingeniería
+de la universidad de Talca.
+
 
 #Temáticas Abordadas
 
