@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="well">
+    <h1 class="text-center" ng-bind="voting.title"></h1>
+    <form>
+ 
+        <p class="vote-option bg-info text-center" 
+            ng-repeat="opt in voting.options track by $index"
+            ng-bind="opt.topic"
+            ng-click="voting.vote(opt)"></p>
+   
+    </form>  
+  </div>
+</div>

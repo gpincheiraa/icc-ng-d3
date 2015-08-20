@@ -1,0 +1,19 @@
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text.vote-value {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.chart text.topic {
+  fill: tomato;
+  font: 12px sans-serif;
+  text-anchor: end;
+}
+
+.vote-option{
+  cursor: pointer;
+}
