@@ -6,45 +6,28 @@
     .module('icc-ng-d3.common')
     .factory('SurveyData',SurveyData);
 
-  SurveyData.$inject = ['$http'];
+  SurveyData.$inject = ['$http','base_url'];
 
-  function SurveyData($http){
+  function SurveyData($http,base_url){
     
     var surveyData = {
-      vote: voteFn,
       getData: getDataFn
     };
 
     return surveyData;
 
-    //Function Definitions
-    function voteFn(vote_data){
-      
-      //retornamos una promesa
-      // return $http({method:'POST',
-      //               url:  '',
-      //               data: {vote_data: vote_data},
-      //             });
-    };
+    //Este será el método que hará una petición GET a la API REST 
+    //para traernos todas las opciones de la encuesta
 
     function getDataFn(){
-      var sampleData = [
-        {topic: "js",
-         votes: 5},
-        {topic: "angular-advanced",
-         votes: 4},
-        {topic: "more-angular-basics",
-         votes:  3},
-        {topic: "angular-ionic",
-         votes: 15}
-      ];
-      
-      return sampleData;
+
       //retornamos una promesa
-      // return $http({method:'GET',
-      //               url: ''
-      //         });
+      return $http({method:'GET',
+                    url: base_url + '/survey-options'
+              });
     };
+  
+
   };
 
 })();

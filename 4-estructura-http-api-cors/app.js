@@ -21,16 +21,18 @@
   //Datos globales
   angular
     .module('icc-ng-d3')
-    .constant('base_url','THE_API_URL');  
+    .constant('base_url','https://icc-ng-d3-api.herokuapp.com/api');  
 
   //funcion de configuración del módulo principal
   angular
     .module('icc-ng-d3')
     .config(configFunction)
   
-  configFunction.$inject = ['$stateProvider', '$urlRouterProvider'];
+  configFunction.$inject = ['$stateProvider', '$urlRouterProvider','$httpProvider'];
   
-  function configFunction($stateProvider,$urlRouterProvider){
+  function configFunction($stateProvider,$urlRouterProvider,$httpProvider){
+    
+  
     $urlRouterProvider.otherwise("app/dashboard");
 
     $stateProvider
