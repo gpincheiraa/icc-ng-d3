@@ -18,15 +18,7 @@
           'module@':{
             templateUrl: "app_modules/voting/voting.html",
             controller: "VotingController",
-            controllerAs: "voting",
-            resolve : {
-              SurveyOptionsResponse : ['SurveyData',function(SurveyData){
-
-                //si acá hay una promesa agregar then 
-                return SurveyData.getOptions();
-
-              }]
-            },
+            controllerAs: "voting"
           } 
         } 
       });

@@ -18,15 +18,7 @@
           'module@':{
             templateUrl: "app_modules/dashboard/dashboard.html",
             controller: "SurveyDashboardController",
-            controllerAs: "dashboard",
-            resolve : {
-              surveyDataResponse : ['SurveyData',function(SurveyData){
-
-                //si acá hay una promesa agregar then 
-                return SurveyData.getData();
-
-              }]
-            },
+            controllerAs: "dashboard"
           } 
         } 
       });

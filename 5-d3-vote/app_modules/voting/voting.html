@@ -2,12 +2,23 @@
   <div class="well">
     <h1 class="text-center" ng-bind="voting.title"></h1>
     <form>
- 
+        <h2>Elegiste la opción {{voting.form.optionSelected.topic}}</h2>
         <p class="vote-option bg-info text-center" 
-            ng-repeat="opt in voting.options track by $index"
+            ng-repeat="opt in voting.options track by opt.idOption"
             ng-bind="opt.topic"
-            ng-click="voting.vote(opt)"></p>
-   
+            ng-click="voting.selectOption(opt)"></p>
+        
+        <div class="form-group">
+          <label>Nombre</label>
+          <input class="form-control" ng-model="voting.form.name">
+        </div>
+        <div class="form-group">
+          <label>Comentario</label>
+          <textarea class="form-control" rows="5" ng-model="voting.form.comment"></textarea>
+        </div>
+        
+        <button class="btn btn-success" ng-click="voting.vote(voting.form)">Votar</button>
+        
     </form>  
   </div>
 </div>

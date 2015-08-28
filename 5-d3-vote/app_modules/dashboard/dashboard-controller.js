@@ -6,13 +6,21 @@
     .module('icc-ng-d3.dashboard')
     .controller('SurveyDashboardController',SurveyDashboardController);
 
-  SurveyDashboardController.$inject = ['surveyDataResponse'];
+  SurveyDashboardController.$inject = ['SurveyData'];
 
-  function SurveyDashboardController(surveyDataResponse){
+  function SurveyDashboardController(SurveyData){
     var vm = this;
 
     vm.title = "Welcome to the ICC's Survey System Dashboard";
-    vm.data  = angular.copy(surveyDataResponse);
+    vm.votes = [];
+
+    //Resolver promesa
+    SurveyData.getVotes().then(function(res){
+      vm.votes = res.data;
+    });
+
   };
+
+
 })();
   

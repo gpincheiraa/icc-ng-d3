@@ -6,59 +6,56 @@
     .module('icc-ng-d3.common')
     .factory('SurveyData',SurveyData);
 
-  SurveyData.$inject = ['$http'];
+  SurveyData.$inject = ['$http','base_url'];
 
-  function SurveyData($http){
+  function SurveyData($http,base_url){
     
     var surveyData = {
-      vote: voteFn,
       getData: getDataFn,
-      getOptions: getOptionsFn
+      vote   : voteFn,
+      getVotes: getVotesFn
     };
 
     return surveyData;
 
-//********* functions Definitions ************
-    
-    function voteFn(vote_data){
-      
-      //retornamos una promesa
-      // return $http({method:'POST',
-      //               url:  '',
-      //               data: {vote_data: vote_data},
-      //             });
-    };
-
-
-    function getOptionsFn(){
-
-      var options = [
-        {topic: "javascript"},
-        {topic: "angular-advanced"},
-        {topic: "more-angular-basics"},
-        {topic: "angular-ionic"},
-        {topic: "node"}
-      ];
-      
-      return options;
-
-    };
+    //Este será el método que hará una petición GET a la API REST 
+    //para traernos todas las opciones de la encuesta
 
     function getDataFn(){
-      var sampleData = [
-        {topic: "javascript",votes: 5},
-        {topic: "angular-advanced",votes: 4},
-        {topic: "more-angular-basics",votes:  3},
-        {topic: "angular-ionic",votes: 15},
-        {topic: "node",votes: 25}
-      ];
-      
-      return sampleData;
+
       //retornamos una promesa
-      // return $http({method:'GET',
-      //               url: ''
-      //         });
+      return $http({method:'GET',
+                    url: base_url + '/survey-options'
+              });
     };
+
+    //Función que envía una petición POST con el cuerpo del voto
+    function voteFn(form){
+
+      //retornamos una promesa
+      return $http({method:'POST',
+                    url: base_url + '/votes',
+                    data: {
+                      idOption : form.optionSelected.idOption,
+                      name     : form.name,
+                      comment  : form.comment
+                    }
+            });
+
+    };
+
+
+    //Función que envia una peticion GET en busca de todos los votos ordenados por cantidad de votos
+    function getVotesFn(){
+
+      //retornamos una promesa
+      return $http({method:'GET',
+                    url: base_url + '/votes/result'
+              });
+
+    };
+
+
   };
 
 })();

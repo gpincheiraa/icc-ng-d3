@@ -1,6 +1,6 @@
 <div class="row">
   <div class="well">
     <h1 class="text-center" ng-bind="dashboard.title"></h1>  
-    <gdg-survey-graph data="dashboard.data"></gdg-survey-graph>
+    <gdg-survey-graph ng-if="dashboard.votes.length > 0" data="dashboard.votes"></gdg-survey-graph>
   </div>
 </div>
