@@ -2,9 +2,9 @@
 
 #Temas cubiertos
 
-* angular.module: ¿Qué es un módulo?
+* Angular Module: ¿Qué es un módulo?
 * Concepto de Directivas y directivas básicas (ng-app,ng-controller,ng-bind)
-* controllers: Qué son y como declararlos
-* directiva ng-model y demostración de two-way binding
+* Controllers: Qué son y como declararlos
+* Directiva ng-model y demostración de two-way binding
 
 

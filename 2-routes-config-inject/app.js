@@ -19,15 +19,11 @@
     $stateProvider
       .state('app',{
         url:'/app',
-        templateUrl: "partials/navbar.html"
+        templateUrl: "navbar.html"
       })
       .state('app.dashboard',{
         url: "/dashboard",
-        views:{
-          'module@':{
-            templateUrl: "partials/dashboard.html"
-          }
-        } 
+        templateUrl: "dashboard.html"  
       });
   };
 

@@ -4,7 +4,7 @@
 
 * Agregando values y constants
 * Implementando un servicio
-* Tipos de servicios: Service, Factory (Provider: más avanzado)
+* Tipos de servicios: Service, Factory (Provider: más avanzado no se toca en este taller)
 
 
 

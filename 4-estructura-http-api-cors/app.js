@@ -28,17 +28,21 @@
     .module('icc-ng-d3')
     .config(configFunction)
   
-  configFunction.$inject = ['$stateProvider', '$urlRouterProvider','$httpProvider'];
+  configFunction.$inject = ['$stateProvider', '$urlRouterProvider'];
   
-  function configFunction($stateProvider,$urlRouterProvider,$httpProvider){
+  function configFunction($stateProvider,$urlRouterProvider){
     
-  
     $urlRouterProvider.otherwise("app/dashboard");
 
     $stateProvider
       .state('app',{
-        url:'/app',
-        templateUrl: "app_modules/common/navbar.html"
+        url: '/app',
+        views:{
+          "app" : {
+            templateUrl: "app_modules/common/navbar.html"
+          }
+        }
+        
       })
   };
 

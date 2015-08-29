@@ -13,11 +13,7 @@
     $stateProvider
       .state('app.dashboard',{
         url: "/dashboard",
-        views:{
-          'module@':{
-            templateUrl: "app_modules/dashboard/dashboard.html"
-          }
-        } 
+        templateUrl: "app_modules/dashboard/dashboard.html"
       });
   };
 

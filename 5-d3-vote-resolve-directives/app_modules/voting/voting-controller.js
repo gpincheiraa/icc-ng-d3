@@ -5,22 +5,17 @@
     .module('icc-ng-d3.voting')
     .controller('VotingController', VotingController);
   
-  VotingController.$inject = ['SurveyData'];
+  VotingController.$inject = ['surveyOptionsResponse'];
   
   /* @ngInject */
-  function VotingController(SurveyData) {
+  function VotingController(surveyOptionsResponse) {
     
     var vm = this;
     
     vm.title = 'Vote for one of those options';
-    vm.options = [];
+    vm.options = surveyOptionsResponse;
     vm.form    = {};
 
-
-    //Resolver promesa
-    SurveyData.getData().then(function(res){
-      vm.options = res.data;
-    });
 
     vm.selectOption = function(option){
 

@@ -29,22 +29,18 @@ Diferencias entre Constant y Values, y para que nos sirven. Explicaremos que es 
 y los dos tipos básicos "Service" y "Factory".
 
 
-Estructura Escalable, Integración del servicio $http (falta desarrollar esta parte) para consumir API
+Estructura Escalable, Integración del servicio $http para consumir API
 -----------------------------------------------------------------------------------------------------
 
 En esta parte explicamos lo importante que es el principio de responsabilidad unica (SRP), como dividir la estructura de nuestro proyecto y porque angular es un Framework que nos permite Testear nuestras aplicaciones.
-Luego al Servicio que ya habíamos construido lo conectaremos con nuestra API mediante el servicio nativo $http y explicaremos el concepto de CORS y que medidas a futuro debiera tomar nuestra aplicación.
+Luego al Servicio que ya habíamos construido lo conectaremos con nuestra API mediante el servicio nativo $http y explicaremos el concepto de CORS y que medidas a futuro debiera tomar nuestra aplicación. (Autenticación, Cookies, Caché , Etc. )
 
 
 Integración de D3, Renderizar barras , agregar animaciones y agregar un nuevo módulo con un formulario
 -----------------------------------------------------------------------------------------------------
-(falta terminar API para enviar datos).
+ Agregaremos el formulario de votación utilizando las directivas ng-repeat y ng-click.
 
- Explicaremos los principios básicos de D3, y como hacer un gráfico de barras y como exportamos este gráfico a una directiva reutilizable en cualquier parte de nuestra aplicación  (y de otras aplicaciones Angular).
+ Finalmente explicaremos los principios básicos de D3, y como hacer un gráfico de barras y como exportamos este gráfico a una directiva reutilizable en cualquier parte de nuestra aplicación  (y de otras aplicaciones Angular).
 
- Finalmente agregaremos el formulario de votación utilizando las directivas ng-repeat y ng-click.
-
-
--- **NOTA: (20/08/2015) Falta la integración de una API, de momento sólo se usan datos de prueba. **--
 
 
