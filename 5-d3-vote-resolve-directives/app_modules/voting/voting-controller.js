@@ -5,10 +5,10 @@
     .module('icc-ng-d3.voting')
     .controller('VotingController', VotingController);
   
-  VotingController.$inject = ['surveyOptionsResponse'];
+  VotingController.$inject = ['SurveyData','surveyOptionsResponse'];
   
   /* @ngInject */
-  function VotingController(surveyOptionsResponse) {
+  function VotingController(SurveyData,surveyOptionsResponse) {
     
     var vm = this;
     
