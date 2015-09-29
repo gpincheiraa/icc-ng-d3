@@ -1,4 +1,3 @@
-
 DEMO ENCUESTA
 =============
 
@@ -42,5 +41,3 @@ Integración de D3, Renderizar barras , agregar animaciones y agregar un nuevo m
  Agregaremos el formulario de votación utilizando las directivas ng-repeat y ng-click.
 
  Finalmente explicaremos los principios básicos de D3, y como hacer un gráfico de barras y como exportamos este gráfico a una directiva reutilizable en cualquier parte de nuestra aplicación  (y de otras aplicaciones Angular).
-
-gpincheiraa
